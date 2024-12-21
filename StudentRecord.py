@@ -65,6 +65,8 @@ def calculate_rankings(records):
     if not records:
         print("No records to process!")
         return
+    
+   
 
 
     results =[]
@@ -72,8 +74,8 @@ def calculate_rankings(records):
         total_marks = sum(subjects.values())
         percentage = total_marks / len(subjects)
         results.append((student_id, total_marks, percentage))
-        
-     results.sort(key=lambda x: x[1], reverse=True)
+
+        results.sort(key=lambda x: x[1], reverse=True)
 
     print("\nRankings:")
     for rank, (student_id, total_marks, percentage) in enumerate(results, start=1):
@@ -102,6 +104,5 @@ def main():
             break
         else:
             print("Invalid choice! Please try again.")
-
 if __name__ == "__main__":
-    main()
+     main() 
